@@ -8,10 +8,10 @@
         android:layout_width="0dp"
         android:layout_height="375dp"
         app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="10dp"
+        app:cardCornerRadius="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -45,10 +45,10 @@
                     android:id="@+id/currencyName"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:text="USD"
                     android:gravity="center_vertical"
-                    android:textSize="48sp"
+                    android:text="USD"
                     android:textColor="@color/black"
+                    android:textSize="48sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"

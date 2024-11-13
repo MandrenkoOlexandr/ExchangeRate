@@ -5,8 +5,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.exchange_rate.items.CurrencyItem
 
-class CurrencyAdapter(private val dataSet: Array<ItemCurrency>) :
+class CurrencyAdapter(private val dataSet: ArrayList<CurrencyItem?>) :
 
     RecyclerView.Adapter<CurrencyAdapter.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -36,11 +37,11 @@ class CurrencyAdapter(private val dataSet: Array<ItemCurrency>) :
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
 
-        viewHolder.currencyName.text = dataSet[position].currency
-        viewHolder.saleRateNBValue.text = dataSet[position].saleRateNB.toString()
-        viewHolder.purchaseRateNBValue.text = dataSet[position].purchaseRateNB.toString()
-        viewHolder.saleRateValue.text = dataSet[position].saleRate.toString()
-        viewHolder.purchaseRateValue.text = dataSet[position].purchaseRate.toString()
+        viewHolder.currencyName.text = dataSet[position]?.currency ?: "N/A"
+        viewHolder.saleRateNBValue.text = dataSet[position]?.saleRateNB?.toString() ?: "N/A"
+        viewHolder.purchaseRateNBValue.text = dataSet[position]?.purchaseRateNB?.toString() ?: "N/A"
+        viewHolder.saleRateValue.text = dataSet[position]?.saleRate?.toString() ?: "N/A"
+        viewHolder.purchaseRateValue.text = dataSet[position]?.purchaseRate?.toString() ?: "N/A"
     }
 
     override fun getItemCount() = dataSet.size
