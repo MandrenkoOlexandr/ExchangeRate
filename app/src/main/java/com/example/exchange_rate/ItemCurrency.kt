@@ -1,8 +1,9 @@
 package com.example.exchange_rate
 
 data class ItemCurrency (
-    val value1: String,
-    val name1: String,
-    val value2: String,
-    val name2: String
+    val currency: String,
+    val saleRateNB: Float,
+    val purchaseRateNB: Float,
+    val saleRate: Float,
+    val purchaseRate: Float
 )

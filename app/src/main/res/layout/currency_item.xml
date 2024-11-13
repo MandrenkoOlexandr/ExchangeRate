@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
-        android:layout_height="75dp"
+        android:layout_height="375dp"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,83 +17,200 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/valueCurrency1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="$"
-                android:textColor="@color/black"
-                android:textSize="48sp"
-
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/nameCurrency1"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/currencyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/saleRateNBLayout"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.5" />
+                app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/nameCurrency1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                <TextView
+                    android:id="@+id/currencyText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:gravity="center_vertical"
+                    android:text="Currency: "
+                    android:textColor="@color/black"
+                    android:textSize="34sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/currencyName"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                android:text="USD"
-                android:textColor="@color/black"
-                android:textSize="34sp"
+                <TextView
+                    android:id="@+id/currencyName"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="USD"
+                    android:gravity="center_vertical"
+                    android:textSize="48sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/currencyText"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imagePointer"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/saleRateNBLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/purchaseRateNBLayout"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/valueCurrency1"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.5" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/currencyLayout">
 
-            <ImageView
-                android:id="@+id/imagePointer"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                <TextView
+                    android:id="@+id/saleRateNBText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:gravity="center_vertical"
+                    android:text="SaleRateNB: "
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/saleRateNBValue"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/valueCurrency2"
+                <TextView
+                    android:id="@+id/saleRateNBValue"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center_vertical"
+                    android:text="15.0564130"
+                    android:textColor="@color/black"
+                    android:textSize="34sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/saleRateNBText"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/purchaseRateNBLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/saleRateLayout"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/nameCurrency1"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.5"
-                app:srcCompat="@drawable/point_pic" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/saleRateNBLayout">
 
-            <TextView
-                android:id="@+id/valueCurrency2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                <TextView
+                    android:id="@+id/purchaseRateNBText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:gravity="center_vertical"
+                    android:text="PurchaseRateNB: "
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/purchaseRateNBValue"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                android:text="₴"
-                android:textColor="@color/black"
-                android:textSize="48sp"
+                <TextView
+                    android:id="@+id/purchaseRateNBValue"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center_vertical"
+                    android:text="15.0564130"
+                    android:textColor="@color/black"
+                    android:textSize="34sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/purchaseRateNBText"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/nameCurrency2"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/saleRateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/purchaseRateLayout"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/imagePointer"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.5" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/purchaseRateNBLayout">
 
-            <TextView
-                android:id="@+id/nameCurrency2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                <TextView
+                    android:id="@+id/saleRateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:gravity="center_vertical"
+                    android:text="SaleRate: "
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/saleRateValue"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                android:text="UAH"
-                android:textColor="@color/black"
-                android:textSize="34sp"
+                <TextView
+                    android:id="@+id/saleRateValue"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center_vertical"
+                    android:text="15.7000000"
+                    android:textColor="@color/black"
+                    android:textSize="34sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/saleRateText"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/purchaseRateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/valueCurrency2"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.5" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/saleRateLayout">
 
+                <TextView
+                    android:id="@+id/purchaseRateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:gravity="center_vertical"
+                    android:text="PurchaseRate: "
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/purchaseRateValue"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/purchaseRateValue"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center_vertical"
+                    android:text="15.3500000"
+                    android:textColor="@color/black"
+                    android:textSize="34sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/purchaseRateText"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

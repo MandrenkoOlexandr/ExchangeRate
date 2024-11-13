@@ -1,25 +1,27 @@
 package com.example.exchange_rate
-
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-
 class CurrencyAdapter(private val dataSet: Array<ItemCurrency>) :
-    RecyclerView.Adapter<CurrencyAdapter.ViewHolder>() {
 
+    RecyclerView.Adapter<CurrencyAdapter.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val valueCurrency1: TextView
-        val nameCurrency1: TextView
-        val valueCurrency2: TextView
-        val nameCurrency2: TextView
+
+        val currencyName: TextView
+        val saleRateNBValue: TextView
+        val purchaseRateNBValue: TextView
+        val saleRateValue: TextView
+        val purchaseRateValue: TextView
 
         init {
-            valueCurrency1 = view.findViewById(R.id.valueCurrency1)
-            nameCurrency1 = view.findViewById(R.id.nameCurrency1)
-            valueCurrency2 = view.findViewById(R.id.valueCurrency2)
-            nameCurrency2 = view.findViewById(R.id.nameCurrency2)
+            currencyName = view.findViewById(R.id.currencyName)
+            saleRateNBValue = view.findViewById(R.id.saleRateNBValue)
+            purchaseRateNBValue = view.findViewById(R.id.purchaseRateNBValue)
+            saleRateValue = view.findViewById(R.id.saleRateValue)
+            purchaseRateValue = view.findViewById(R.id.purchaseRateValue)
+
         }
     }
 
@@ -32,10 +34,11 @@ class CurrencyAdapter(private val dataSet: Array<ItemCurrency>) :
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
 
-        viewHolder.valueCurrency1.text = dataSet[position].value1
-        viewHolder.nameCurrency1.text = dataSet[position].name1
-        viewHolder.valueCurrency2.text = dataSet[position].value2
-        viewHolder.nameCurrency2.text = dataSet[position].name2
+        viewHolder.currencyName.text = dataSet[position].currency
+        viewHolder.saleRateNBValue.text = dataSet[position].saleRateNB.toString()
+        viewHolder.purchaseRateNBValue.text = dataSet[position].purchaseRateNB.toString()
+        viewHolder.saleRateValue.text = dataSet[position].saleRate.toString()
+        viewHolder.purchaseRateValue.text = dataSet[position].purchaseRate.toString()
     }
 
     override fun getItemCount() = dataSet.size
