@@ -1,13 +1,13 @@
-package com.example.exchange_rate
+package com.example.exchange_rate.items
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.exchange_rate.items.CurrencyItem
+import com.example.exchange_rate.R
 
-class CurrencyAdapter(private val dataSet: ArrayList<CurrencyItem?>) :
+class CurrencyAdapter(private val dataSet: List<CurrencyItem>) :
 
     RecyclerView.Adapter<CurrencyAdapter.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
