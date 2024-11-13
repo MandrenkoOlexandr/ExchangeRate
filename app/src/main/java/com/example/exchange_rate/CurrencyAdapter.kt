@@ -1,9 +1,11 @@
 package com.example.exchange_rate
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+
 class CurrencyAdapter(private val dataSet: Array<ItemCurrency>) :
 
     RecyclerView.Adapter<CurrencyAdapter.ViewHolder>() {
