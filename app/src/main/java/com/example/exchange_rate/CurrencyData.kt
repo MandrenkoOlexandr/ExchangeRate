@@ -9,4 +9,6 @@ val dataset: Array<ItemCurrency> = arrayOf(
     ItemCurrency("C$", "CAD", "₴", "UAH"),
     ItemCurrency("¥", "CNY", "₴", "UAH"),
     ItemCurrency("₹", "INR", "₴", "UAH")
+//    ItemCurrency(i[saleRateNB], i[baseCurrency], 1, i[currency]),
+//    ItemCurrency(1, i[currency], i[purchaseRateNB], i[baseCurrency])
 )
