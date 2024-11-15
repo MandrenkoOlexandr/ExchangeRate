@@ -1,6 +1,5 @@
 package com.example.exchange_rate.items
 
-
 import com.google.gson.annotations.SerializedName
 
 data class ItemListOfCur(

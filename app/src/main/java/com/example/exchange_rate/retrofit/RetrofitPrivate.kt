@@ -21,7 +21,7 @@ class RetrofitPrivate {
     private val service = retrofit.create(ServicePrivate::class.java)
 
     fun getCurrencyExchange(data : String, resultCallback: (ItemListOfCur?) -> Unit) {
-        // TODO:
+
         val call = service.getCurrencyExchange(null, data)
 
         call?.enqueue(object : Callback<ItemListOfCur> {
@@ -36,9 +36,6 @@ class RetrofitPrivate {
                 resultCallback(null)
             }
 
-        }
-
-
-        )
+        })
     }
 }
