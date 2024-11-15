@@ -2,7 +2,7 @@ package com.example.exchange_rate
 
 import android.app.DatePickerDialog
 import android.os.Bundle
-import androidx.activity.viewModels
+import androidx.activity.viewModelsleEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.example.exchange_rate.databinding.ActivityMainBinding
@@ -60,4 +60,3 @@ class MainActivity : AppCompatActivity() {
         datePickerDialog.show()
     }
 }
-
