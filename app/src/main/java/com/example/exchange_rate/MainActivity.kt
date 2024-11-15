@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
 
         val minDay = 1
         val minMonth = 12
-        val minYear = 2008
+        val minYear = 2014
         calendar.set(minYear, minMonth - 1, minDay)
         datePickerDialog.datePicker.minDate = calendar.timeInMillis
         datePickerDialog.show()
